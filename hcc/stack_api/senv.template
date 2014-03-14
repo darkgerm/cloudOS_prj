@@ -1,0 +1,8 @@
+OS_USERNAME="xxxxxx"
+OS_PASSWORD="xxxxxx"
+OS_AUTH_URL="https://xxxxxxxxxxxxxxxxxxxxx/keystone/v2.0"
+OS_TENANT_NAME="xxxxxx"
+
+# find by `keystone tenant-list`
+OS_TENANT_ID="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+

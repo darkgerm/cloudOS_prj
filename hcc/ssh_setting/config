@@ -1,0 +1,15 @@
+
+Host nctu
+    HostName xxx.xxx.xxx.xxx
+    User root
+    StrictHostKeyChecking no
+    IdentityFile /home/cloud_prj/hcc/ssh_setting/keypair.pem
+
+# ssh to 192.168. via nctu
+Host 192.168.*
+    # stack, localhost
+    User root
+    StrictHostKeyChecking no
+    IdentityFile /home/cloud_prj/hcc/ssh_setting/hhc.pem
+    ProxyCommand ssh -q nctu nc %h 22
+

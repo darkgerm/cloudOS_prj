@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>HCC</title>
+        <script type='text/javascript' src='//code.jquery.com/jquery-1.10.2.min.js'></script>
+    </head>
+    <body>
+        <h1>HCC, Hyper Clustering Computing</h1>
+        <form id='sendForm' action='fsupload' method='POST' enctype='multipart/form-data' style="display:inline-block">
+            <input type='text' name='username' value='{{username}}' style="display:none" />
+            <input type='file' name='file' />
+        </form><br />
+        <button id='show'>Show</button>
+        <button id='send'>Upload</button>
+
+        <table border="1">
+            <tbody id='content'>
+            </tbody>
+        </table>
+        <table>
+            <tbody id='stdout'>
+                <h2>stdout:</h2>
+                <textarea id="std2" cols=110 rows=15></textarea>
+            </tbody>
+        </table>
+        <table>
+            <tbody id='stderr'>
+                <h2>stderr:</h2>
+                <textarea id="std3" cols=110 rows=15></textarea>
+            </tbody>
+        </table>
+        <script type='text/javascript'>
+        username = "{{username}}";
+        $(document).ready(function() {
+            $('#show').click(function() {
+                loadJSON();
+            });
+            $('#send').click(function() {
+                 sendForm();
+            });
+            $('#show').click();
+        });
+        </script>
+        <script type='text/javascript' src='../static/js/hcc.js'></script>
+    </body>
+</html>
